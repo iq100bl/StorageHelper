@@ -1,0 +1,15 @@
+﻿@model StorageViewModel[]
+
+@foreach(var storage in Model){
+    <div class="card mb-3" >
+    <div>
+            <strong>@storage.Name</strong>
+    </div>
+    @foreach(var item in storage.Items){
+        <div>
+            @item.NomenclatureDescribtion
+            @item.Count
+        </div>
+    }
+  </div>
+}
